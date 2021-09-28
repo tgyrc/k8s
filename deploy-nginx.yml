@@ -3,7 +3,7 @@ kind: Deployment #指定類型為Deployment
 metadata: #定義資源
   name: nginx-deployment #定義Deployment的名稱
   annotations: #添加註解，方便部署
-        kubernetes.io/change-cause: v1
+        kubernetes.io/change-cause: UP-123
 spec: #描述規格
   selector: #標籤選擇器
     matchLabels: #創建的Pod須符合的標籤
@@ -17,5 +17,6 @@ spec: #描述規格
       containers: #定義容器
       - name: nginx #容器名為
         image:  rv88/web-8000:v1 #使用的
+        imagePullPolicy: Always # Always 每次都重拉 imgae
         ports: #設定POD的端口
         - containerPort: 8000
