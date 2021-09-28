@@ -2,12 +2,6 @@ piVersion: apps/v1 #指定使用API-V1版本
 kind: Deployment #指定類型為Deployment
 metadata: #定義資源
   name: nginx-deployment #定義Deployment的名稱
-  labels: #Deployment使用的標籤
-      app: nginx
-  annotations: #添加註解，方便部署
-      version: v1
-      release_date: 2021/09/30
-      creaeer: exia
 spec: #描述規格
   selector: #標籤選擇器
     matchLabels: #創建的Pod須符合的標籤
