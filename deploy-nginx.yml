@@ -9,12 +9,6 @@ spec: #描述規格
     matchLabels: #創建的Pod須符合的標籤
       app: nginx #標籤名為nginx
   replicas: 3 # tells deployment to run 3 pods matching the template
-  strategy:
-  type: RollingUpdate #使用rollingupdate
-  rollingUpdate:
-    maxSurge: 1 #1個pod刪除後才會再產生下一個pod
-    maxUnavailable: 1 #最多1個pod不能使用
-    minReadySeconds: 5 #container 啟動5秒後再進行升級
   template: #配置POD
     metadata: #定義資源
       labels: #使用的標籤
