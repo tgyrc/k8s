@@ -1,4 +1,5 @@
-ind: Deployment #指定類型為Deployment
+apiVersion: apps/v1 #指定使用API-V1版本
+kind: Deployment #指定類型為Deployment
 metadata: #定義資源
   name: nginx-blue-deployment #定義Deployment的名稱
   annotations: #添加註解，方便部署
