@@ -16,7 +16,6 @@ spec: #描述規格
     spec: #描述規格
       containers: #定義容器
       - name: nginx #容器名為
-        image:  rv88/web-8000:v1 #使用的
-        imagePullPolicy: Always # Always 每次都重拉 imgae
+        image:  rv88/web-8000:v1 #使用的image
         ports: #設定POD的端口
         - containerPort: 8000
