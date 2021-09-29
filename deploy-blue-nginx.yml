@@ -8,7 +8,7 @@ spec: #描述規格
   selector: #標籤選擇器
     matchLabels: #創建的Pod須符合的標籤
       app: blue-nginx #標籤名為nginx
-  replicas: 3 # tells deployment to run 3 pods matching the template
+  replicas: 1 # tells deployment to run 3 pods matching the template
   template: #配置POD
     metadata: #定義資源
       labels: #使用的標籤
