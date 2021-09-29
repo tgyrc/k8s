@@ -1,4 +1,4 @@
-piVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: nginx-ingress
@@ -6,14 +6,14 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: blue.demo.com
+  - host: blue.35.229.244.53.nip.io
     http:
       paths:
       - path: /
         backend:
           serviceName: blue-nginx-service
           servicePort: 8000
-  - host: green.demo.com
+  - host: green.35.229.244.53.nip.io
     http:
       paths:
       - path: /
