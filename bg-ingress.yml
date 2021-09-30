@@ -11,7 +11,7 @@ spec:
         path: "/"
         backend:
           service:
-            name: blue-service
+            name: blue-web-svc
             port:
               number: 60000
   - host: green.35.229.244.53.nip.io
@@ -21,6 +21,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: green-service
+            name: green-web-svc
             port:
               number: 80
