@@ -1,4 +1,4 @@
-piVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: blue-web-deploy
@@ -24,7 +24,7 @@ kind: Service
 metadata:
   name: blue-web-svc
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: blue-web
   ports:
